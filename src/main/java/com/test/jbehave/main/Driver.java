@@ -1,0 +1,72 @@
+package com.test.jbehave.main;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Enumeration;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+
+public class Driver {
+
+    private Driver() {
+    }
+
+    public static WebDriver driver;
+
+    public static void init() {
+        //Configurations for file properties using
+        Properties properties = new Properties();
+        FileInputStream propFile;
+        try {
+            propFile = new FileInputStream("test.properties");
+            properties.load(propFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Assert.fail(e.getMessage());
+        }
+        @SuppressWarnings("unchecked")
+        Enumeration<String> e = (Enumeration<String>) properties.propertyNames();
+        while (e.hasMoreElements()) {
+            String key = e.nextElement();
+            System.setProperty(key, properties.getProperty(key));
+            //Reporter.log(key + " - " + properties.getProperty(key), 2, true);
+        } //Configurations for file properties using
+
+
+
+        //driver = new FirefoxDriver();
+
+        String s = System.getProperty("test.browser");
+        if (s.equals("firefox")) {
+            driver = new FirefoxDriver();
+
+        } else if (s.equals("chrome")) {
+            System.setProperty("webdriver.chrome.driver", "/Users/bryantnguyen1801/JBehaveSearch/chromedriver");
+            driver = new ChromeDriver();
+
+        } else {
+            throw new AssertionError("Unsupported browser: " + System.getProperty("test.browser"));
+        }
+
+        //Configurations for synchronization
+        driver.manage().timeouts().implicitlyWait(
+                Integer.parseInt(System.getProperty("test.timeout")),
+                TimeUnit.SECONDS
+        ); //Configurations for synchronization
+    }
+
+
+    public static void tearDown() {
+        driver.quit();
+    }
+}

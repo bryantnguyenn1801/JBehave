@@ -1,0 +1,23 @@
+<story path="com/test/jbehave/stories/my.story" title="">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">log in into Gmail</inOrderTo>
+  <asA keyword="As a">user</asA>
+  <iWantTo keyword="I want to">make sure that log in page works as expected</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Negative test log in page.">
+<examples keyword="Examples:">
+<step>Given I open the browser and proceed to google page https://google.com</step>
+<step>When I input keyword JBehave in field and click enter</step>
+<step>Then Google responses the results, and I wanna verify JBehave that the search correct or not</step>
+<parameters>
+<names><name>keyword</name><name>text</name></names>
+<values><value>JBehave</value><value>JBehave</value></values>
+</parameters>
+
+<example keyword="Example:">{keyword=JBehave, text=JBehave}</example>
+<step outcome="successful">Given I open the browser and proceed to google page <parameter>https://google.com</parameter></step>
+<step outcome="successful">When I input keyword <parameter>JBehave</parameter> in field and click enter</step>
+<step outcome="successful">Then Google responses the results, and I wanna verify <parameter>JBehave</parameter> that the search correct or not</step>
+</examples>
+</scenario>
+</story>
