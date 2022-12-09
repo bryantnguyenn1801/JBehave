@@ -1,2 +1,8 @@
-/Users/bryantnguyen1801/JBehaveSearch/src/main/java/stepsDefinition/SearchOnGoogle.java
-/Users/bryantnguyen1801/JBehaveSearch/src/main/java/Runners/searchingRunner.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/MyStories.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/main/Driver.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/steps/MySteps.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/main/Base.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/pages/GoogleSearchPage.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/pages/GoogleServiceSearching.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/main/Page.java
+/Users/bryantnguyen1801/JBehaveSearch/src/main/java/com/test/jbehave/pages/GoogleHomePage.java

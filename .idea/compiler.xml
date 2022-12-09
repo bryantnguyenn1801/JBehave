@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JBehaveSearch" />
+        <module name="jbehave-selenium" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jbehave-spring" target="1.8" />
+      <module name="JBehaveSearch" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

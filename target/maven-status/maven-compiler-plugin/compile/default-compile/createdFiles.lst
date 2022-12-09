@@ -1,2 +1,8 @@
-stepsDefinition/SearchOnGoogle.class
-Runners/searchingRunner.class
+com/test/jbehave/MyStories.class
+com/test/jbehave/pages/GoogleHomePage.class
+com/test/jbehave/pages/GoogleSearchPage.class
+com/test/jbehave/main/Driver.class
+com/test/jbehave/steps/MySteps.class
+com/test/jbehave/main/Page.class
+com/test/jbehave/main/Base.class
+com/test/jbehave/pages/GoogleServiceSearching.class
